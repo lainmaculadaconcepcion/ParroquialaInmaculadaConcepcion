@@ -111,12 +111,19 @@ border-radius:10px;
 border-left:5px solid #1f3c88;
 }
 
-/* SECCION REDES */
+/* 🔵 SECCION REDES CORREGIDA */
 
 .redes{
 background:#1f3c88;
 color:white;
 text-align:center;
+
+width:100vw; /* ocupa todo el ancho real */
+position:relative;
+left:50%;
+transform:translateX(-50%);
+
+padding:30px 20px; /* un poco más equilibrado en PC */
 }
 
 .redes h2{
@@ -139,10 +146,6 @@ text-align:center;
 padding:20px;
 font-size:14px;
 }
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
 
 /* RESPONSIVE */
 
@@ -207,7 +210,6 @@ display:flex;
 <h1>Parroquia</h1><h2> La Inmaculada Concepción.</h2>
 <p>Vesalles, Valle del Cauca</p>
 
-<!-- AQUI PUEDES PONER TU IMAGEN -->
 <img src="IMG-20260314-WA0002.jpg" alt="Imagen de la parroquia">
 
 </section>
@@ -240,7 +242,6 @@ display:flex;
 <strong>Párroco:</strong>
 <p>Pbro. Orlando de Jesus Toro V</p>
 </div>
-
 
 <div class="card">
 <strong>Teléfono:</strong>
