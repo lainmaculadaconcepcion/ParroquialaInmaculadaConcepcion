@@ -1,11 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Oraciones - Parroquia La Inmaculada Concepción</title>
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:white;
+color:#333;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+header{
+background:#1f3c88;
+color:white;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:bold;
+}
+
+.logo img{
+width:50px;
+height:auto;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.menu a:hover{
+text-decoration:underline;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+}
+
+.hamburger span{
+height:3px;
+width:25px;
+background:white;
+margin:4px;
+}
+
+/* CONTENIDO */
+
+section{
+padding:50px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.hero{
+text-align:center;
+}
+
+.hero h1{
+color:#1f3c88;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+}
+
+/* TARJETAS */
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.card{
+background:#f5f7ff;
+padding:20px;
+border-radius:10px;
+border-left:5px solid #1f3c88;
+box-shadow:0 3px 8px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card strong{
+display:block;
+font-size:18px;
+margin-bottom:10px;
+color:#1f3c88;
+}
+
+/* REDES */
+
+.redes{
+background:#1f3c88;
+color:white;
+text-align:center;
+width:100%;
+max-width:none;
+margin:0;
+padding:30px 20px;
+}
+
+.redes h2{
+margin-bottom:20px;
+}
+
+.redes a{
+display:inline-block;
+margin:10px;
+padding:10px 15px;
+background:white;
+color:#1f3c88;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.redes a:hover{
+background:#e5e8ff;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+background:#1f3c88;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+padding:20px;
+}
+
+.menu.active{
+display:flex;
+}
+
+.hamburger{
+display:flex;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+<img src="29773-removebg-preview.png" alt="Logo">
+<span>Parroquia La Inmaculada Concepción</span>
+</div>
+
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav class="menu" id="menu">
+<a href="index.html">Inicio</a>
+<a href="historia.html">Historia</a>
+<a href="horarios.html">Horarios</a>
+<a href="sacramentos.html">Sacramentos</a>
+<a href="oraciones.html">Oraciones</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
 <h1>Oraciones Católicas</h1>
-<p>Encuentra aquí algunas de las principales oraciones de la tradición católica para fortalecer tu vida espiritual.</p>
+
+<p>
+Encuentra aquí algunas de las principales oraciones de la tradición católica para fortalecer tu vida espiritual y acercarte más a Dios.
+</p>
 
 <div class="info">
 
@@ -31,12 +256,12 @@
 
 <div class="card">
 <strong>Credo</strong>
-<p>Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, nuestro Señor... (Símbolo de los Apóstoles).</p>
+<p>Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato...</p>
 </div>
 
 <div class="card">
 <strong>Salve Regina</strong>
-<p>Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra. Dios te salve...</p>
+<p>Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra. Dios te salve. A ti llamamos los desterrados hijos de Eva...</p>
 </div>
 
 <div class="card">
@@ -51,22 +276,22 @@
 
 <div class="card">
 <strong>Regina Coeli</strong>
-<p>Reina del cielo, alégrate, aleluya. Porque el Señor, a quien has merecido llevar, aleluya, ha resucitado según su palabra, aleluya.</p>
+<p>Reina del cielo, alégrate, aleluya. Porque el Señor, a quien has merecido llevar, aleluya, ha resucitado según su palabra.</p>
 </div>
 
 <div class="card">
 <strong>Acto de Contrición</strong>
-<p>Señor mío Jesucristo, Dios y hombre verdadero, me pesa de todo corazón haberte ofendido...</p>
+<p>Señor mío Jesucristo, Dios y hombre verdadero, me pesa de todo corazón haberte ofendido porque eres infinitamente bueno.</p>
 </div>
 
 <div class="card">
 <strong>Acto de Fe</strong>
-<p>Dios mío, creo firmemente todo lo que Tú has revelado y la Santa Iglesia nos propone creer.</p>
+<p>Dios mío, creo firmemente todo lo que Tú has revelado y la Santa Iglesia Católica nos propone creer.</p>
 </div>
 
 <div class="card">
 <strong>Acto de Esperanza</strong>
-<p>Dios mío, espero con firme confianza que, por los méritos de Jesucristo, me concederás la vida eterna.</p>
+<p>Dios mío, espero con firme confianza que por los méritos de Jesucristo me concederás la vida eterna.</p>
 </div>
 
 <div class="card">
@@ -81,77 +306,76 @@
 
 <div class="card">
 <strong>Oración de la Mañana</strong>
-<p>Señor, gracias por regalarme un nuevo día. Guía mis pasos, ilumina mi mente y fortalece mi corazón para cumplir tu voluntad.</p>
+<p>Gracias Señor por este nuevo día. Guía mis pasos, protege a mi familia y ayúdame a cumplir tu santa voluntad.</p>
 </div>
 
 <div class="card">
 <strong>Oración de la Noche</strong>
-<p>Señor, gracias por este día. Perdona mis faltas, protege a mi familia y concédeme descansar bajo tu amparo. Amén.</p>
+<p>Gracias Señor por todo lo vivido hoy. Perdona mis faltas, bendice mi descanso y acompáñame siempre.</p>
 </div>
 
 <div class="card">
 <strong>Ven Espíritu Santo</strong>
-<p>Ven, Espíritu Santo, llena los corazones de tus fieles y enciende en ellos el fuego de tu amor.</p>
+<p>Ven Espíritu Santo, llena los corazones de tus fieles y enciende en ellos el fuego de tu amor.</p>
 </div>
 
 <div class="card">
 <strong>Oración antes de Comer</strong>
-<p>Bendice, Señor, estos alimentos que vamos a recibir por tu bondad. Por Cristo nuestro Señor. Amén.</p>
+<p>Bendice Señor estos alimentos que vamos a recibir por tu bondad. Por Cristo nuestro Señor. Amén.</p>
 </div>
 
 <div class="card">
 <strong>Oración después de Comer</strong>
-<p>Te damos gracias, Señor, por los alimentos recibidos y por todos los beneficios que diariamente nos concedes.</p>
+<p>Te damos gracias Señor por los alimentos recibidos y por todos los beneficios que diariamente nos concedes.</p>
 </div>
 
 <div class="card">
 <strong>Oración por la Familia</strong>
-<p>Jesús, María y José, protejan nuestro hogar. Concédannos vivir en paz, amor y unidad, siguiendo siempre la voluntad de Dios.</p>
+<p>Jesús, María y José, protejan nuestro hogar. Concédannos vivir siempre unidos en el amor y la fe.</p>
 </div>
 
 <div class="card">
 <strong>Oración por los Enfermos</strong>
-<p>Señor Jesús, médico de nuestras almas y cuerpos, concede salud y fortaleza a quienes sufren enfermedad.</p>
+<p>Señor Jesús, médico de nuestras almas y cuerpos, concede fortaleza, esperanza y salud a quienes sufren enfermedad.</p>
 </div>
 
 <div class="card">
 <strong>Oración por los Difuntos</strong>
-<p>Dales, Señor, el descanso eterno y brille para ellos la luz perpetua. Descansen en paz. Amén.</p>
+<p>Dales Señor el descanso eterno y brille para ellos la luz perpetua. Descansen en paz. Amén.</p>
 </div>
 
 <div class="card">
 <strong>Oración por las Vocaciones</strong>
-<p>Señor, envía obreros a tu mies. Despierta en muchos jóvenes el deseo de servirte como sacerdotes, religiosos y religiosas.</p>
+<p>Señor, envía obreros a tu mies y suscita vocaciones santas al sacerdocio y a la vida consagrada.</p>
 </div>
 
 <div class="card">
 <strong>Oración por la Paz</strong>
-<p>Señor Jesús, haznos instrumentos de tu paz y enséñanos a vivir en el amor, el perdón y la reconciliación.</p>
+<p>Haznos Señor instrumentos de tu paz y enséñanos a sembrar reconciliación donde exista división.</p>
 </div>
 
 <div class="card">
 <strong>Oración a San José</strong>
-<p>Glorioso San José, custodio de la Sagrada Familia, protege nuestras familias y ayúdanos a vivir siempre según la voluntad de Dios.</p>
+<p>Glorioso San José, custodio de la Sagrada Familia, protege nuestras familias y acompáñanos siempre.</p>
 </div>
 
 <div class="card">
 <strong>Oración a San Miguel Arcángel</strong>
-<p>San Miguel Arcángel, defiéndenos en la batalla; sé nuestro amparo contra la perversidad y asechanzas del demonio.</p>
+<p>San Miguel Arcángel, defiéndenos en la batalla. Sé nuestro amparo contra la perversidad y asechanzas del demonio.</p>
 </div>
-
 <div class="card">
 <strong>Consagración al Sagrado Corazón de Jesús</strong>
-<p>Sagrado Corazón de Jesús, en Vos confío. Haz mi corazón semejante al tuyo y ayúdame a vivir en tu amor.</p>
+<p>Sagrado Corazón de Jesús, en Vos confío. Haz mi corazón semejante al tuyo y ayúdame a vivir siempre según tu Evangelio.</p>
 </div>
 
 <div class="card">
 <strong>Consagración al Inmaculado Corazón de María</strong>
-<p>Inmaculado Corazón de María, sé mi refugio y el camino que me conduzca siempre a Jesucristo.</p>
+<p>Inmaculado Corazón de María, sé mi refugio y el camino seguro que me conduzca siempre hacia Jesucristo.</p>
 </div>
 
 <div class="card">
 <strong>Oración antes de la Confesión</strong>
-<p>Señor, ilumina mi conciencia para reconocer mis pecados y acercarme al sacramento de la Reconciliación con un corazón arrepentido.</p>
+<p>Señor, ilumina mi conciencia para reconocer sinceramente mis pecados y acercarme con humildad al sacramento de la Reconciliación.</p>
 </div>
 
 <div class="card">
@@ -161,32 +385,32 @@
 
 <div class="card">
 <strong>Oración después de Comulgar</strong>
-<p>Gracias, Señor Jesús, por venir a mi corazón. Permanece siempre conmigo y ayúdame a vivir según tu Evangelio.</p>
+<p>Gracias Señor Jesús por venir a mi corazón. Permanece siempre conmigo y haz que mi vida sea testimonio de tu amor.</p>
 </div>
 
 <div class="card">
 <strong>Magníficat</strong>
-<p>Proclama mi alma la grandeza del Señor, se alegra mi espíritu en Dios mi Salvador.</p>
+<p>Proclama mi alma la grandeza del Señor; se alegra mi espíritu en Dios mi Salvador, porque ha mirado la humildad de su esclava.</p>
 </div>
 
 <div class="card">
 <strong>Benedictus</strong>
-<p>Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo.</p>
+<p>Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo y nos ha suscitado una fuerza de salvación.</p>
 </div>
 
 <div class="card">
 <strong>Nunc Dimittis</strong>
-<p>Ahora, Señor, según tu promesa, puedes dejar a tu siervo irse en paz.</p>
+<p>Ahora, Señor, según tu promesa, puedes dejar a tu siervo irse en paz, porque mis ojos han visto tu salvación.</p>
 </div>
 
 <div class="card">
 <strong>Jesús, en Ti Confío</strong>
-<p>Jesús, en Ti confío. Aumenta mi fe, fortalece mi esperanza y hazme perseverar siempre en tu amor.</p>
+<p>Jesús, en Ti confío. Aumenta mi fe, fortalece mi esperanza y enséñame a abandonarme siempre en tu divina misericordia.</p>
 </div>
 
 <div class="card">
 <strong>Oración por la Iglesia</strong>
-<p>Señor, fortalece a tu Iglesia, al Papa, a los obispos, sacerdotes y a todo el pueblo de Dios para anunciar fielmente el Evangelio.</p>
+<p>Señor, fortalece a tu Iglesia, al Santo Padre, a los obispos, sacerdotes, diáconos, religiosos y a todo el Pueblo de Dios.</p>
 </div>
 
 <div class="card">
@@ -194,6 +418,111 @@
 <p>Señor Jesucristo, bendice nuestra patria. Danos gobernantes sabios, familias unidas y un pueblo comprometido con la verdad, la justicia y la paz.</p>
 </div>
 
+<div class="card">
+<strong>Oración por los Sacerdotes</strong>
+<p>Señor Jesús, santifica a todos los sacerdotes. Fortalécelos en su ministerio y hazlos fieles servidores de tu Iglesia.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Niños</strong>
+<p>Jesús, protege a todos los niños del mundo. Hazlos crecer en sabiduría, gracia y amor a Dios.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Jóvenes</strong>
+<p>Señor, guía a los jóvenes para que descubran su vocación y permanezcan siempre firmes en la fe.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Matrimonios</strong>
+<p>Bendice Señor a todos los esposos. Haz que vivan siempre en fidelidad, respeto y amor.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Abuelos</strong>
+<p>Señor, recompensa el amor y la entrega de nuestros abuelos. Concédeles salud, paz y fortaleza.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Viajeros</strong>
+<p>Señor, acompaña a quienes emprenden un viaje. Protégelos de todo peligro y permíteles regresar con bien.</p>
+</div>
+
+<div class="card">
+<strong>Oración antes de Dormir</strong>
+<p>En tus manos, Señor, encomiendo mi espíritu. Protégeme durante esta noche y concédeme un descanso tranquilo.</p>
+</div>
+
+<div class="card">
+<strong>Oración al comenzar el trabajo</strong>
+<p>Señor, bendice el trabajo que hoy voy a realizar. Que todo lo haga con honestidad, responsabilidad y amor.</p>
+</div>
+
+<div class="card">
+<strong>Oración de Acción de Gracias</strong>
+<p>Gracias Señor por tu amor, por la vida, por mi familia y por todos los dones que cada día derramas sobre mí.</p>
+</div>
+
+<div class="card">
+<strong>Oración por la Unidad</strong>
+<p>Padre bueno, haz que todos los cristianos vivamos unidos en la misma fe y en el mismo amor.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Necesitados</strong>
+<p>Señor, socorre a quienes viven en la pobreza, la enfermedad o la soledad. Haznos generosos para ayudarlos.</p>
+</div>
+
+<div class="card">
+<strong>Oración por los Gobernantes</strong>
+<p>Concede Señor sabiduría a quienes gobiernan para que trabajen buscando siempre el bien común.</p>
+</div>
+
+<div class="card">
+<strong>Oración por la Esperanza</strong>
+<p>Señor Jesús, cuando llegue el desánimo, fortalece mi corazón y haz que nunca pierda la esperanza en Ti.</p>
+</div>
+
+<div class="card">
+<strong>Oración por la Fe</strong>
+<p>Creo Señor, pero aumenta mi fe para seguirte con fidelidad todos los días de mi vida.</p>
+</div>
+
+<div class="card">
+<strong>Oración por la Caridad</strong>
+<p>Hazme Señor un instrumento de tu amor para servir con alegría a quienes más lo necesitan.</p>
+</div>
+
+<div class="card">
+<strong>Oración de Confianza</strong>
+<p>Padre bueno, pongo toda mi vida en tus manos porque sé que nunca abandonas a quienes esperan en Ti.</p>
+</div>
+
 </div>
 
 </section>
+
+<section class="redes">
+
+<h2>Enlaces</h2>
+
+<a href="https://wa.me/573153529123">WhatsApp</a>
+<a href="https://vm.tiktok.com/ZS9MB5nXmeSyc-02yob/">TikTok</a>
+<a href="https://www.facebook.com/share/1aj7SDrka5/">Facebook</a>
+
+</section>
+
+<footer>
+© 2026 Parroquia La Inmaculada Concepción
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
