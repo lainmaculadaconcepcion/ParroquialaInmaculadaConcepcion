@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Parroquia La Inmaculada Concepción</title>
 
 <style>
@@ -11,13 +13,20 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html,body{
+width:100%;
+max-width:100%;
+overflow-x:hidden;
 }
 
 body{
 background:white;
 color:#333;
 }
+
 
 /* NAVBAR */
 
@@ -33,22 +42,30 @@ align-items:center;
 padding:15px 20px;
 }
 
+
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
+font-size:20px;
 font-weight:bold;
 }
+
 
 .logo img{
 width:50px;
 height:auto;
 }
 
+
+
+/* MENU */
+
 .menu{
 display:flex;
 gap:20px;
 }
+
 
 .menu a{
 color:white;
@@ -56,11 +73,14 @@ text-decoration:none;
 font-weight:bold;
 }
 
+
 .menu a:hover{
 text-decoration:underline;
 }
 
-/* HAMBURGER */
+
+
+/* HAMBURGUESA */
 
 .hamburger{
 display:none;
@@ -68,12 +88,15 @@ flex-direction:column;
 cursor:pointer;
 }
 
+
 .hamburger span{
 height:3px;
 width:25px;
 background:white;
 margin:4px;
 }
+
+
 
 /* SECCIONES */
 
@@ -83,9 +106,11 @@ max-width:1100px;
 margin:auto;
 }
 
+
 .hero{
 text-align:center;
 }
+
 
 .hero img{
 width:100%;
@@ -94,41 +119,52 @@ border-radius:10px;
 margin-top:20px;
 }
 
-/* TARJETAS DE INFORMACION */
+
+
+/* TARJETAS */
 
 .info{
+
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 margin-top:40px;
+
 }
 
+
 .card{
+
 background:#f5f7ff;
 padding:20px;
 border-radius:10px;
 border-left:5px solid #1f3c88;
 }
 
-/* 🔵 SECCION REDES CORREGIDA (SOLUCIÓN REAL) */
+
+
+/* REDES */
 
 .redes{
+
 background:#1f3c88;
 color:white;
 text-align:center;
-
 width:100%;
-max-width:none; /* rompe el límite de section */
+max-width:none;
 margin:0;
-
 padding:30px 20px;
+
 }
+
 
 .redes h2{
 margin-bottom:20px;
 }
 
+
 .redes a{
+
 display:inline-block;
 margin:10px;
 padding:10px 15px;
@@ -137,19 +173,52 @@ color:#1f3c88;
 border-radius:5px;
 text-decoration:none;
 font-weight:bold;
+
 }
 
+
+
+/* FOOTER */
+
 footer{
+
 text-align:center;
 padding:20px;
 font-size:14px;
+
 }
+
+
 
 /* RESPONSIVE */
 
 @media(max-width:768px){
 
+
+.navbar{
+
+padding:15px 20px;
+
+}
+
+
+.logo{
+
+font-size:20px;
+
+}
+
+
+.logo span{
+
+line-height:1.2;
+
+}
+
+
+
 .menu{
+
 display:none;
 flex-direction:column;
 background:#1f3c88;
@@ -158,128 +227,255 @@ top:60px;
 left:0;
 width:100%;
 padding:20px;
+z-index:100;
+
 }
+
 
 .menu.active{
+
 display:flex;
+
 }
+
 
 .hamburger{
+
 display:flex;
+
+}
+
+
+section{
+
+padding:35px 15px;
+
+}
+
+
+.info{
+
+grid-template-columns:1fr;
+
+}
+
+
+.card{
+
+width:100%;
+
 }
 
 }
+
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
 <div class="navbar">
+
+
 <div class="logo">
+
 <img src="29773-removebg-preview.png" alt="Logo parroquia">
-<span>Parroquia La Inmaculada Concepción</span>
+
+<span>
+Parroquia La Inmaculada Concepción
+</span>
+
 </div>
+
+
 
 <div class="hamburger" onclick="toggleMenu()">
+
 <span></span>
 <span></span>
 <span></span>
+
 </div>
 
+
+
 <nav class="menu" id="menu">
+
 <a href="index.html">Inicio</a>
+
 <a href="historia.html">Historia</a>
+
 <a href="horarios.html">Horarios</a>
+
 <a href="sacramentos.html">Sacramentos</a>
+
 <a href="contacto.html">Contacto</a>
+
 <a href="oraciones.html">Oraciones</a>
+
 </nav>
+
+
 </div>
 
 </header>
 
 
-<!-- SECCION PRINCIPAL -->
+
+
 
 <section class="hero">
 
-<h1>Parroquia</h1><h2> La Inmaculada Concepción.</h2>
+
+<h1>Parroquia</h1>
+
+<h2>La Inmaculada Concepción.</h2>
+
 <p>Versalles, Valle del Cauca</p>
+
 
 <img src="IMG-20260314-WA0002.jpg" alt="Imagen de la parroquia">
 
+
 </section>
 
 
-<!-- INFORMACION -->
+
+
 
 <section>
 
+
 <h2>Información</h2>
+
 
 <div class="info">
 
+
+
 <div class="card">
+
 <strong>Nombre:</strong>
+
 <p>La Inmaculada Concepción</p>
+
 </div>
 
+
+
 <div class="card">
+
 <strong>Diocesis:</strong>
-<p>Cartago,Valle del Cauca</p>
+
+<p>Cartago, Valle del Cauca</p>
+
 </div>
 
+
+
 <div class="card">
+
 <strong>Dirección:</strong>
+
 <p>Carrera 8 # 6-53</p>
+
 </div>
 
+
+
 <div class="card">
+
 <strong>Párroco:</strong>
+
 <p>Pbro. Orlando de Jesus Toro V</p>
+
 </div>
 
+
+
 <div class="card">
+
 <strong>Teléfono:</strong>
+
 <p>315 352 9123</p>
+
 </div>
+
+
 
 <div class="card">
+
 <strong>Información adicional:</strong>
+
 <p>Aquí puedes agregar más información</p>
-</div>
 
 </div>
+
+
+
+</div>
+
 
 </section>
 
 
-<!-- REDES SOCIALES -->
+
+
+
 
 <section class="redes">
 
+
 <h2>Enlaces</h2>
 
-<a href="https://wa.me/573153529123">WhatsApp</a>
-<a href="https://vm.tiktok.com/ZS9MB5nXmeSyc-02yob/">TikTok</a>
-<a href="https://www.facebook.com/share/1aj7SDrka5/">Facebook</a>
+
+<a href="https://wa.me/573153529123">
+WhatsApp
+</a>
+
+
+<a href="https://vm.tiktok.com/ZS9MB5nXmeSyc-02yob/">
+TikTok
+</a>
+
+
+<a href="https://www.facebook.com/share/1aj7SDrka5/">
+Facebook
+</a>
+
+
 
 </section>
 
+
+
+
 <footer>
+
 © 2026 Parroquia La Inmaculada Concepción
+
 </footer>
+
+
+
 
 <script>
 
 function toggleMenu(){
+
 document.getElementById("menu").classList.toggle("active");
+
 }
 
 </script>
 
+
+
 </body>
 </html>
+```
