@@ -49,6 +49,8 @@ width:50px;
 height:auto;
 }
 
+/* MENU */
+
 .menu{
 display:flex;
 gap:20px;
@@ -64,7 +66,7 @@ font-weight:bold;
 text-decoration:underline;
 }
 
-/* HAMBURGER */
+/* HAMBURGUESA */
 
 .hamburger{
 display:none;
@@ -101,10 +103,6 @@ max-width:800px;
 margin:auto;
 }
 
-.btn-catecismo:hover{
-background:#16306f;
-}
-
 /* TARJETAS */
 
 .info{
@@ -121,9 +119,6 @@ border-radius:10px;
 border-left:5px solid #1f3c88;
 box-shadow:0 3px 8px rgba(0,0,0,.08);
 transition:.3s;
-overflow-wrap:break-word;
-word-wrap:break-word;
-word-break:break-word;
 }
 
 .card:hover{
@@ -138,8 +133,7 @@ color:#1f3c88;
 }
 
 .card p{
-overflow-wrap:break-word;
-word-wrap:break-word;
+overflow-wrap:anywhere;
 word-break:break-word;
 }
 
@@ -174,6 +168,8 @@ font-weight:bold;
 background:#e5e8ff;
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:20px;
@@ -184,6 +180,18 @@ font-size:14px;
 
 @media(max-width:768px){
 
+.navbar{
+padding:15px 20px;
+}
+
+.logo{
+font-size:20px;
+}
+
+.logo span{
+line-height:1.2;
+}
+
 .menu{
 display:none;
 flex-direction:column;
@@ -193,6 +201,7 @@ top:60px;
 left:0;
 width:100%;
 padding:20px;
+z-index:100;
 }
 
 .menu.active{
@@ -203,15 +212,16 @@ display:flex;
 display:flex;
 }
 
-.logo{
-flex:1;
-min-width:0;
+section{
+padding:35px 15px;
 }
 
-.logo span{
-font-size:16px;
-line-height:1.2;
-word-break:break-word;
+.info{
+grid-template-columns:1fr;
+}
+
+.card{
+width:100%;
 }
 
 }
@@ -227,7 +237,7 @@ word-break:break-word;
 <div class="navbar">
 
 <div class="logo">
-<img src="29773-removebg-preview.png" alt="Logo">
+<img src="29773-removebg-preview.png" alt="Logo parroquia">
 <span>Parroquia La Inmaculada Concepción</span>
 </div>
 
@@ -255,7 +265,7 @@ word-break:break-word;
 <h1>Contacto</h1>
 
 <p>
-Puedes comunicarte con nuestra parroquia a través de los siguientes medios
+Puedes comunicarte con nuestra parroquia a través de los siguientes medios.
 </p>
 
 <div class="info">
