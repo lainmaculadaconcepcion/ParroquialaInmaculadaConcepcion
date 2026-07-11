@@ -19,6 +19,7 @@ body{
 background:white;
 color:#333;
 line-height:1.6;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -99,6 +100,7 @@ margin-bottom:15px;
 max-width:800px;
 margin:auto;
 }
+
 .btn-catecismo:hover{
 background:#16306f;
 }
@@ -119,6 +121,9 @@ border-radius:10px;
 border-left:5px solid #1f3c88;
 box-shadow:0 3px 8px rgba(0,0,0,.08);
 transition:.3s;
+overflow-wrap:break-word;
+word-wrap:break-word;
+word-break:break-word;
 }
 
 .card:hover{
@@ -130,6 +135,12 @@ display:block;
 font-size:18px;
 margin-bottom:10px;
 color:#1f3c88;
+}
+
+.card p{
+overflow-wrap:break-word;
+word-wrap:break-word;
+word-break:break-word;
 }
 
 /* REDES */
@@ -192,6 +203,17 @@ display:flex;
 display:flex;
 }
 
+.logo{
+flex:1;
+min-width:0;
+}
+
+.logo span{
+font-size:16px;
+line-height:1.2;
+word-break:break-word;
+}
+
 }
 
 </style>
@@ -215,7 +237,6 @@ display:flex;
 <span></span>
 </div>
 
-
 <nav class="menu" id="menu">
 <a href="index.html">Inicio</a>
 <a href="historia.html">Historia</a>
@@ -224,18 +245,12 @@ display:flex;
 <a href="contacto.html">Contacto</a>
 <a href="oraciones.html">Oraciones</a>
 </nav>
-</div>
 
 </div>
 
 </header>
 
-
-
-
-
 <section class="hero">
-
 
 <h1>Contacto</h1>
 
@@ -243,89 +258,50 @@ display:flex;
 Puedes comunicarte con nuestra parroquia a través de los siguientes medios
 </p>
 
-
-
 <div class="info">
-
-
 
 <div class="card">
 <strong>Dirección</strong>
-<p>
-Carrera 8 # 6-53
-</p>
-<p>
-Versalles, Valle del Cauca
-</p>
+<p>Carrera 8 # 6-53</p>
+<p>Versalles, Valle del Cauca</p>
 </div>
-
-
-
 
 <div class="card">
 <strong>Teléfono</strong>
-<p>
-315 352 9123
-</p>
+<p>315 352 9123</p>
 </div>
 
-
-
-
 <div class="card">
-<strong>Padre Nuestro</strong>
+<strong>Correo Electrónico</strong>
 <p>parroquialainmacladaversalles@gmail.com</p>
 </div>
 
-
-
-
 <div class="card">
 <strong>Párroco</strong>
-<p>
-Pbro. Orlando de Jesus Toro V
-</p>
+<p>Pbro. Orlando de Jesus Toro V</p>
 </div>
 
-
-
 </div>
-
 
 </section>
 
-
-
-
-
-
 <section class="redes">
 
-
 <h2>Enlaces</h2>
-
 
 <a href="https://wa.me/573153529123">
 WhatsApp
 </a>
 
-
 <a href="https://vm.tiktok.com/ZS9MB5nXmeSyc-02yob/">
 TikTok
 </a>
-
 
 <a href="https://www.facebook.com/share/1aj7SDrka5/">
 Facebook
 </a>
 
-
 </section>
-
-
-
-
-
 
 <footer>
 
@@ -333,23 +309,13 @@ Facebook
 
 </footer>
 
-
-
-
-
-
 <script>
 
 function toggleMenu(){
-
-    document.getElementById("menu").classList.toggle("active");
-
+document.getElementById("menu").classList.toggle("active");
 }
 
 </script>
 
-
-
 </body>
-
 </html>
